@@ -145,7 +145,7 @@ export default function App() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           service_id: "service_emwuqmd",
-          template_id: "template_wkzpeji",
+          template_id: "template_eczxova",
           user_id: "bDzKjU5FvK9rkOGxc",
           template_params: {
             name: formData.name,
