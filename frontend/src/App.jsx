@@ -145,7 +145,7 @@ export default function App() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           service_id: "service_emwuqmd",
-          template_id: "template_eczxova",
+          template_id: "template_wkzpeji",
           user_id: "bDzKjU5FvK9rkOGxc",
           template_params: {
             name: formData.name,
@@ -325,7 +325,7 @@ export default function App() {
                   <li>Tested 34+ API scenarios in Postman covering authentication, authorization and data validation</li>
                 </ul>
                 <div className="tl-stack">
-                  {["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tesseract.js"].map(t => (
+                  {["React.js", "Node.js", "Express.js", "MongoDB", "JWT"].map(t => (
                     <span key={t} className="stack-tag">{t}</span>
                   ))}
                 </div>
