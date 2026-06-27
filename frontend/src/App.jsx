@@ -140,12 +140,20 @@ export default function App() {
     setSending(true);
     setFormStatus("");
     try {
-      const res = await fetch("https://mihir-portfolio-lxru.onrender.com/api/contact", {
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          service_id: "service_emwuqmd",
+          template_id: "wkzpeji",
+          user_id: "bDzKjU5FvK9rkOGxc",
+          template_params: {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          },
+        }),
       });
-      const data = await res.json();
       if (res.ok) {
         setFormStatus("success");
         setFormData({ name: "", email: "", message: "" });
