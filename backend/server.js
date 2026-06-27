@@ -4,7 +4,12 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    /\.vercel\.app$/,
+  ],
+}));
 app.use(express.json());
 
 // ── Nodemailer transporter (Gmail) ──
