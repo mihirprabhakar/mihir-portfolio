@@ -312,7 +312,7 @@ export default function App() {
               <div className="timeline-content">
                 <div className="tl-header">
                   <div>
-                    <h3 className="tl-role">Full Stack Developer Intern</h3>
+                    <h3 className="tl-role">Marg ERP - Full Stack Developer Intern</h3>
                     <p className="tl-company">Internship Program</p>
                   </div>
                   <span className="tl-period">June 2026 – August 2026</span>
