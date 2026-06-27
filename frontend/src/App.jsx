@@ -140,7 +140,7 @@ export default function App() {
     setSending(true);
     setFormStatus("");
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch("https://mihir-portfolio-lxru.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
