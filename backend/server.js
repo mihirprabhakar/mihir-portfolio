@@ -14,10 +14,12 @@ app.use(express.json());
 
 // ── Nodemailer transporter (Gmail) ──
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
   auth: {
-    user: process.env.GMAIL_USER,   // your Gmail address
-    pass: process.env.GMAIL_PASS,   // Gmail App Password (not your real password)
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS,
   },
 });
 
@@ -53,10 +55,10 @@ app.post("/api/contact", async (req, res) => {
   const toSender = {
     from: `"Mihir Prabhakar" <${process.env.GMAIL_USER}>`,
     to: email,
-    subject: `Thanks for reaching out, ${name}! `,
+    subject: `Thanks for reaching out, ${name}! 👋`,
     html: `
       <div style="font-family:sans-serif;max-width:520px;margin:auto;padding:24px;border:1px solid #e0e0e0;border-radius:10px;">
-        <h2 style="color:#6c63ff;">Hey ${name}! </h2>
+        <h2 style="color:#6c63ff;">Hey ${name}! 👋</h2>
         <p style="color:#555;">Thanks for reaching out through my portfolio. I've received your message and will get back to you as soon as possible — usually within 24 hours.</p>
         <div style="margin:20px 0;padding:16px;background:#f8f8f8;border-radius:8px;">
           <p style="color:#888;font-size:13px;margin-bottom:6px;">Your message:</p>
