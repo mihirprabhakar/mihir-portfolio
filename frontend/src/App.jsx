@@ -203,7 +203,7 @@ export default function App() {
           <div className="hero-actions">
             <a href="https://www.linkedin.com/in/mihir-prabhakar-952869291/" target="_blank" rel="noreferrer" className="btn btn-primary">LinkedIn</a>
             <a href="https://github.com/mihirprabhakar" target="_blank" rel="noreferrer" className="btn btn-outline">GitHub</a>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn btn-outline">📄 Resume</a>
+            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn btn-outline"> Resume</a>
             <button className="btn btn-ghost" onClick={() => handleNav("Contact")}>Hire Me</button>
           </div>
           <div className="hero-stats">
