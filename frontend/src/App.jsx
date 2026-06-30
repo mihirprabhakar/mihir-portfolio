@@ -15,6 +15,23 @@ const SKILLS = {
 
 const PROJECTS = [
   {
+    title: "E-commerce Monolithic Web Application",
+    subtitle: "Full-Stack Platform with Multi-Role Access",
+    desc: "A full-stack e-commerce platform built with MERN stack following a monolithic architecture with role-based access control and JWT authentication.",
+    bullets: [
+      "Built 18 REST API endpoints across 6 modules with MVC architecture and clean separation of concerns",
+      "Implemented JWT authentication and RBAC for admin, vendor and customer roles",
+      "Built complete CRUD modules for users, products & categories with validation, pagination, search & soft delete",
+      "Integrated Multer for file upload with memory buffer storage",
+      "Developed React.js frontend with Vite, 18 configured routes and 14 reusable UI components",
+      "Tested 34+ API scenarios in Postman covering authentication, authorization and data validation",
+    ],
+    stack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "bcryptjs", "Multer", "Vite", "React Router DOM"],
+    date: "June 2026 – Present",
+    tag: "MERN · E-commerce",
+    github: "https://github.com/mihirprabhakar/e-commerce-project-",
+  },
+  {
     title: "OCR-Based Document Management System",
     subtitle: "Role-Based Access Control & ERP Integration",
     desc: "A full-stack MERN application that automates document scanning, OCR-based data extraction, and ERP/SAP integration with enterprise-grade role-based access control.",
@@ -31,23 +48,7 @@ const PROJECTS = [
     tag: "MERN · Enterprise",
     github: "https://github.com/mihirprabhakar/ocr-project",
   },
-  {
-    title: "E-commerce Monolithic Web Application",
-    subtitle: "Full-Stack Platform with Multi-Role Access",
-    desc: "A full-stack e-commerce platform built with MERN stack following a monolithic architecture with role-based access control and JWT authentication.",
-    bullets: [
-      "Built 18 REST API endpoints across 6 modules with MVC architecture and clean separation of concerns",
-      "Implemented JWT authentication and RBAC for admin, vendor and customer roles",
-      "Built complete CRUD modules for users, products & categories with validation, pagination, search & soft delete",
-      "Integrated Multer for file upload with memory buffer storage",
-      "Developed React.js frontend with Vite, 18 configured routes and 14 reusable UI components",
-      "Tested 34+ API scenarios in Postman covering authentication, authorization and data validation",
-    ],
-    stack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "bcryptjs", "Multer", "Vite", "React Router DOM"],
-    date: "June 2026 – Aug 2026",
-    tag: "MERN · E-commerce",
-    github: "https://github.com/mihirprabhakar/e-commerce-project-",
-  },
+  ,
   {
     title: "Color Matching Grid Game",
     subtitle: "Interactive Browser Game",
@@ -57,7 +58,7 @@ const PROJECTS = [
       "Implemented undo functionality and countdown timer for gameplay challenge",
     ],
     stack: ["HTML5", "CSS3", "JavaScript"],
-    date: "May 2024",
+    date: "Oct 2025- Nov 2025",
     tag: "Frontend · Game",
     github: "https://github.com/mihirprabhakar/Color-matching-Grid-Game",
   },
@@ -68,7 +69,7 @@ const EDUCATION = [
     institution: "Dronacharya Group of Institutions",
     degree: "B.Tech Computer Science & Engineering",
     period: "2023 – 2027",
-    detail: "Currently in 3rd year · CGPA: 8.0",
+    detail: "Currently in 4th year · CGPA: 8.0",
   },
   {
     institution: "The Adarsh School",
@@ -189,14 +190,14 @@ export default function App() {
       <section id="About" className="hero">
         <div className="hero-bg-grid" />
         <div className="hero-content reveal">
-          <p className="hero-eyebrow">👋 Hello, I'm</p>
+          <p className="hero-eyebrow"> Hello, I'm</p>
           <h1 className="hero-name">Mihir Prabhakar</h1>
           <div className="hero-role">
             <span className="typed-text">{typed}</span>
             <span className="cursor">|</span>
           </div>
           <p className="hero-bio">
-            3rd-year B.Tech CSE student at Dronacharya Group of Institutions, passionate about building
+            4th-year B.Tech CSE student at Dronacharya Group of Institutions, passionate about building
             scalable full-stack applications. Proficient in MERN stack, DSA, and system design.
             Solved <span className="highlight">330+ DSA problems</span> on LeetCode & GeeksForGeeks.
           </p>
@@ -316,7 +317,7 @@ export default function App() {
                     <h3 className="tl-role">Marg ERP Pvt Ltd . - Full Stack Developer Intern</h3>
                     <p className="tl-company">Internship Program</p>
                   </div>
-                  <span className="tl-period">June 2026 – August 2026</span>
+                  <span className="tl-period">June 2026 – Present</span>
                 </div>
                 <ul className="tl-bullets">
                   <li>Developed a monolithic e-commerce web application with Node.js REST API backend and React.js frontend</li>
@@ -416,15 +417,15 @@ export default function App() {
               <div className="form-group">
                 <label>Message</label>
                 <textarea
-                  rows={5}
+                  rows={8}
                   placeholder="Tell me about the opportunity..."
                   value={formData.message}
                   onChange={e => setFormData(f => ({ ...f, message: e.target.value }))}
                   required
                 />
               </div>
-              {formStatus === "success" && <p className="form-success">✅ Message sent! I'll get back to you soon.</p>}
-              {formStatus === "error" && <p className="form-error">❌ Something went wrong. Please email me directly.</p>}
+              {formStatus === "success" && <p className="form-success"> Message sent! I'll get back to you soon.</p>}
+              {formStatus === "error" && <p className="form-error"> Something went wrong. Please email me directly.</p>}
               <button type="submit" className="btn btn-primary btn-full" disabled={sending}>
                 {sending ? "Sending..." : "Send Message →"}
               </button>
