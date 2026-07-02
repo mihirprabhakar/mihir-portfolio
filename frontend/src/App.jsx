@@ -48,7 +48,6 @@ const PROJECTS = [
     tag: "MERN · Enterprise",
     github: "https://github.com/mihirprabhakar/ocr-project",
   },
-  ,
   {
     title: "Color Matching Grid Game",
     subtitle: "Interactive Browser Game",
@@ -61,6 +60,7 @@ const PROJECTS = [
     date: "Oct 2025- Nov 2025",
     tag: "Frontend · Game",
     github: "https://github.com/mihirprabhakar/Color-matching-Grid-Game",
+    demo: "https://color-matching-grid-game.vercel.app/",
   },
 ];
 
@@ -291,9 +291,14 @@ export default function App() {
                   <div className="project-stack">
                     {p.stack.map(t => <span key={t} className="stack-tag">{t}</span>)}
                   </div>
-                  {p.github && (
-                    <a href={p.github} target="_blank" rel="noreferrer" className="project-link">View on GitHub ↗</a>
-                  )}
+                  <div style={{display:"flex", gap:"0.75rem"}}>
+                    {p.demo && (
+                      <a href={p.demo} target="_blank" rel="noreferrer" className="project-link">Live Demo ↗</a>
+                    )}
+                    {p.github && (
+                      <a href={p.github} target="_blank" rel="noreferrer" className="project-link">GitHub ↗</a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
